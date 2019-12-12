@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApplication1
 {
@@ -11,6 +12,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             belah("programit");
+            carikata("hit bot");
             Console.ReadKey();      
         }
 
@@ -110,5 +112,16 @@ namespace ConsoleApplication1
 
             return null;
         }
+
+        public static string carikata(string kata)
+        {
+            string[] dict = new string[5] { "hot", "dot", "dog", "lot", "log" };
+            Regex rx = new Regex("([a-z])(a|i|u|e|o)([a-z])");
+            MatchCollection matches = rx.Matches(kata);
+
+
+            return null;
+        }
+
     }
 }
